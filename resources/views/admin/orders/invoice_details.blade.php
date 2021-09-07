@@ -88,7 +88,7 @@
 
                                     
                                     @endforeach
-                                    </tr>
+                                <!--     </tr>
                                     <tr>
     								<td class="thick-line"></td>
     								<td class="thick-line"></td>
@@ -96,7 +96,7 @@
                                     <td class="thick-line"></td>
     								<td class="thick-line text-center"><strong>Subtotal</strong></td>
     								<td class="thick-line text-center">INR {{$orderDetails->grand_total}}</td>
-    							</tr>
+    							</tr> -->
     							<tr>
     								<td class="no-line"></td>
     								<td class="no-line"></td>
@@ -119,7 +119,7 @@
                                     <td class="thick-line"></td>
                                     <td class="thick-line"></td>
     								<td class="no-line text-center"><strong>Total</strong></td>
-    								<td class="no-line text-center">INR {{($orderDetails->grand_total+$orderDetails->shipping_charge)-($orderDetails->coupon_amount)}}</td>
+    								<td class="no-line text-center">INR {{($orderDetails->grand_total)+($orderDetails->shipping_charge)}}</td>
     							</tr>
 
 

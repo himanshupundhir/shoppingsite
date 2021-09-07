@@ -102,9 +102,9 @@ class ProductController extends Controller
         $products=Product::get();
         foreach($products as $key=>$val){
             $category_name=Category::where(['id'=>$val->category_id])->first();
-            $products[$key]->category_name=$category_name->name;
+            $products[$key]->category_name=$category_name['name'];
         }
-        // $kk=json_encode(json_decode($product));
+        // $kk=json_encode(json_decode($products));
         // echo "</pre>";print_r($kk);die;
         return view('admin.products.view_products')->with(compact('products'));
     }
@@ -693,9 +693,9 @@ class ProductController extends Controller
 
 
                         ];
-                        Mail::send('email.order',$messageData,function($message) use ($email){
-                        $message->to($email)->subject('order placed-ecommerce website');
-                        });
+                        // Mail::send('email.order',$messageData,function($message) use ($email){
+                        // $message->to($email)->subject('order placed-ecommerce website');
+                        // });
 
                          // code for order email ends
                 return redirect('/thanks');

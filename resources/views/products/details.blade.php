@@ -34,8 +34,8 @@
 										<div class="item active thumbnails">
 										
 											@foreach($imageDetails as $imageshow)
-											<a href="{{asset('public/images/backend_images/products/medium/'.$imageshow->image)}}">			
-										  <img class="changeImage" style="width:80px;cursor:pointer;" src="{{asset('/images/backend_images/products/medium/'.$imageshow->image)}}"alt="" />
+											<a href="{{asset('/public/public/images/backend_images/products/medium/'.$imageshow->image)}}">			
+										  <img class="changeImage" style="width:80px;cursor:pointer;" src="{{asset('/public/images/backend_images/products/medium/'.$imageshow->image)}}"alt="" />
 </a>
 										  @endforeach
 										</div>
@@ -45,7 +45,7 @@
 									</div>
 
 								  <!-- Controls -->
-								  <!-- <a class="left item-control" href="#similar-product" data-slide="prev">
+								<!--   <a class="left item-control" href="#similar-product" data-slide="prev">
 									<i class="fa fa-angle-left"></i>
 								  </a>
 								  <a class="right item-control" href="#similar-product" data-slide="next">

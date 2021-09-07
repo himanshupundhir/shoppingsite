@@ -36,10 +36,10 @@ class UserController extends Controller
 
              $email=$data['email'];
              $messageData=['email'=>$data['email'],'name'=>$data['name'],'code'=>base64_encode($data['email'])];
-             Mail::send('email.confirmation',$messageData,function($message) use($email)
-             {
-                 $message->to($email)->subject('Confirm your E-com Account');
-             });
+             // Mail::send('email.confirmation',$messageData,function($message) use($email)
+             // {
+             //     $message->to($email)->subject('Confirm your E-com Account');
+             // });
             
 
              return redirect()->back()->with('flash_message_success','your account is activate');
@@ -52,19 +52,19 @@ class UserController extends Controller
         return view('users.login_register');
     }
 
-    // public function checkemail(Request $request){
+    public function checkemail(Request $request){
 
-    //         $data=$request->all();
+            $data=$request->all();
 
-    //     $usercount=User::where('email',$data['email'])->count();
-    //     if($usercount>0){
-    //     echo "false";
-    //     }
-    //     else{
-    //         echo "true";
-    //     }
+        $usercount=User::where('email',$data['email'])->count();
+        if($usercount>0){
+        echo "false";
+        }
+        else{
+            echo "true";
+        }
 
-    // }
+    }
     public function userlogin(Request $request){
         if($request->IsMethod('post')){
 

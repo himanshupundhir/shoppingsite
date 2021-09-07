@@ -18,9 +18,10 @@ $(document).ready(function(){
 							$("#chkPwd").html("<font color='green'>current password is correct </font>")
 						}
 					}
-				},error:function(){
-					alert("Error1");
-				}
+				} 
+				// ,error:function(){
+				// 	alert("Error1");
+				// }
 
 		})
 		});

@@ -51,7 +51,7 @@
                   <td>{{$product->price}}</td>
                   <td>
                   @if(!empty($product->image))
-                  <img src="{{asset('//images/backend_images/products/small/'.$product->image)}}">
+                  <img src="{{asset('public/images/backend_images/products/small/'.$product->image)}}">
                   @endif
                   </td>
                   <td class="center"><a href="#myModal{{$product->id}}" data-toggle="modal" class="btn btn-success btn-mini">view</a>

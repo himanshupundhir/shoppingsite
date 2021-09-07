@@ -63,9 +63,10 @@ $.ajax({
 			$("#Availability").text("in stock");
 		}
 
-	},error:function(){
-		alert("error");
 	}
+	// ,error:function(){
+	// 	alert("error");
+	// }
 })
 });
 
@@ -147,9 +148,10 @@ $(".demo2").click(function(){
 		success:function(resp){
 			alert(resp);
 
-		},error:function(){
-			alert("error");
 		}
+		// ,error:function(){
+		// 	alert("error");
+		// }
 
 	})
 	
@@ -171,17 +173,17 @@ $("#registerform").validate({
 	rules:{
 		name:{
 			required:true,
-			minlength:6,
+			minlength:3,
 			accept:"[a-zA-Z]+"
 		},
 		password:{
 			required:true,
-			minlength:6
+			minlength:3
 		},
 		email:{
 			required:true,
 			email:true,
-			remote:"/check-email"
+			remote:"check-email"
 	
 		}
 	},

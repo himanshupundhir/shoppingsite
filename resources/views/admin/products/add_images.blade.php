@@ -106,7 +106,7 @@
               <tr>
               <td>{{$image->id}}</td>
               <td>{{$image->product_id}}
-              <td><img src="{{asset('//images/backend_images/products/small/'.$image->image)}}"></td>
+              <td><img src="{{asset('public/images/backend_images/products/small/'.$image->image)}}" width="50" height="50"></td>
               <td><a rel="{{$image->id}}" rel1="{{url('/admin/delete-image')}}/{{$image->id}}"  <?php /* href="{{url('/admin/delete-product')}}/{{$product->id}}"*/ ?> href="javascript:" class="btn btn-danger btn-mini deletImage">Delete</a></td>
               </tr>
            @endforeach
